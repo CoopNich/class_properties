@@ -1,5 +1,7 @@
 class Student():
 
+    
+
     @property
     def first_name(self):
         try:
@@ -63,7 +65,9 @@ class Student():
     @property
     def full_name(self):
         return f'{self.first_name} {self.last_name}'
-
+    
+    def __str__(self):
+        return f'{self.full_name} is {self.age} and is in cohort {self.cohort_number}.'
 
 cooper = Student()
 
@@ -71,7 +75,7 @@ cooper.first_name = "Cooper"
 cooper.last_name = "Nichols"
 cooper.age = 100
 cooper.cohort_number = 38
-print(cooper.full_name)
+print(cooper)
 
     
 
